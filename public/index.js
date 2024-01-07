@@ -11,12 +11,9 @@ app.use(express.static("public"));
 // app.get("/",function(req,res){
 //     res.sendFile(__dirname+"/index.html");
 // });
-//處理來自路徑/square?num=數字 的連線
-app.get("/square",function(req,res){
-    //取得網址列的參數 req.query.參數名稱
-    let num=req.query.num;
-    let result=num*num;
-    res.send("Result is:"+result);
+//處理來自路徑/text的連線
+app.get("/test",function(req,res){
+    res.send("Hello Test");
 });
 //處理來自路徑/img/landscape.jpg的連線
 // app.get("/hello.php",function(req,res){
